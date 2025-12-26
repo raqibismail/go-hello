@@ -1,8 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt" 
+	"os"
+) 
 
 func main() {
-	fmt.Println("Hello. This is my first Go project.")
+	if len(os.Args) > 1 {
+		fmt.Println("Hello, ", os.Args[1])
+	} else {
+		fmt.Println("Hello. This is my first Go project.")
+	}
 }
-
